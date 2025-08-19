@@ -2,54 +2,44 @@
 
 int main(){
 
-int bispo = 1;
-int rainha = 1;
-int torre = 1;                //Declaração variaveis
+    int bispo = 1;
+    int rainha = 1;
+    int torre = 1;
 
+    // Movimento do bispo
+    while (bispo <= 5) {
+        printf("Bispo:Cima,Direita\n");
+        bispo++;
+    }
 
+    // Movimento da rainha
+    do {
+        printf("Rainha:Esquerda\n");
+        rainha++;
+    } while (rainha <= 8);
 
-while (bispo <= 5){                  //while do bispo
+    // Movimento da torre
+    for (torre; torre <= 5; torre++) {
+        printf("Torre:Direita\n");
+    }
 
-    printf("Bispo:Cima,Direita\n");  //Movimentação do bispo
+    // Separação
+    printf("\n");
 
+    // Movimento do cavalo usando dois loops aninhados (um for obrigatório)
+    int i = 0;
 
+    while (i < 1) { 
+        for (int j = 0; j < 2; j++) {  // 2 movimentos para baixo
+            printf("Cavalo:Baixo\n");
+        }
 
-    bispo++;
-}
+        for (int k = 0; k < 1; k++) {  // 1 movimento para esquerda
+            printf("Cavalo:Esquerda\n");
+        }
 
+        i++;
+    }
 
-
-do                                    //do while da rinha
-{
-
-    
-        
-        printf("Rainha:Esquerda\n"); 
-        rainha++;                      //Movimentação rainha
-        
-    
-    
-
-} while (rainha <= 8);
-
-
-for (torre; torre <= 5; torre++) //for da torre
-{
-    printf("Torre:Direita\n");
-}
-
-
-
-
-
-
-
-
-return 0;
-
-
-
-
-
-
+    return 0;
 }
